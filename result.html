@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+
+<body>
+
+    <h1>Image</h1>
+    <img src="{{ blurred_image_path }}" alt="Blurred Image">
+
+    <p>Original Class: {{ original_class }}</p>
+    <p>Original Confidence: {{ original_confidence }}</p>
+    <p>Adversarial Class: {{ adversarial_class }}</p>
+    <p>Adversarial Confidence: {{ adversarial_confidence }}</p>
+
+    {% if is_offensive %}
+    <p>This image was classified as offensive.</p>
+    {% else %}
+    <p>This image was not classified as offensive.</p>
+    {% endif %}
+
+</body>
+
+</html>
